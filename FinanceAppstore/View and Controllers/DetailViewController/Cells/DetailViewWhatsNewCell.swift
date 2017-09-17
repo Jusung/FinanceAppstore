@@ -9,18 +9,25 @@
 import UIKit
 
 class DetailViewWhatsNewCell: UITableViewCell {
-    @IBOutlet weak var releaseDate: UILabel!
-    @IBOutlet weak var releaseNotes: UILabel!
+    @IBOutlet weak var releaseDate: UILabel?
+    @IBOutlet weak var releaseNotes: UILabel?
 
+    var item: DetailViewModelItem? {
+        didSet {
+            guard let item = item as? DetailViewModelReleaseItem else {
+                return
+            }
+            
+            releaseDate?.text = item.releaseDate.shortDate()
+            releaseNotes?.text = item.releaseNote
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static var identifier: String {
+        return String(describing: self)
     }
-
 }

@@ -9,19 +9,29 @@
 import UIKit
 
 class DetailViewGeneralInfoCell: UITableViewCell {
-    @IBOutlet weak var appImage: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var appImage: UIImageView?
+    @IBOutlet weak var title: UILabel?
+    @IBOutlet weak var author: UILabel?
 
+    var item: DetailViewModelItem? {
+        didSet {
+            guard let item = item as? DetailViewModelProfileItem else {
+                return
+            }
+            
+            appImage?.imageFromURL(urlString: item.thumbnailURL)
+            title?.text = item.title
+            author?.text = item.author
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        appImage?.roundedStyle(width: self.frame.height)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static var identifier: String {
+        return String(describing: self)
     }
-
 }

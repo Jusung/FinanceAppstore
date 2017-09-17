@@ -27,9 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let contentData = try Data(contentsOf: url!)
             let json = JSON(data: contentData)
             let entries: JSON = json["feed"]["entry"]
-            masterViewController.json = entries
+            
+            var items: [AppstoreItem] = []
+
+            for entry in entries.arrayValue {
+                let anItem = try AppstoreItem(json: entry)
+                items.append(anItem!)
+            }
+            
+            masterViewController.items = items
         } catch {
-            masterViewController.json = JSON.null
+            print("error occurs while fetching data:\(error)")
         }
         
         return true

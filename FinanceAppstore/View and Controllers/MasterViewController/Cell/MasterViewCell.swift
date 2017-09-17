@@ -9,19 +9,26 @@
 import UIKit
 
 class MasterViewCell: UITableViewCell {
-    @IBOutlet weak var ranking: UILabel!
-    @IBOutlet weak var appImage: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var ranking: UILabel?
+    @IBOutlet weak var appImage: UIImageView?
+    @IBOutlet weak var title: UILabel?
+    @IBOutlet weak var category: UILabel?
 
+    var item: AppstoreItem? {
+        didSet {
+            guard let item = item else {
+                return
+            }
+            
+            appImage?.imageFromURL(urlString: item.thumbnailURL!)
+            title?.text = item.title
+            category?.text = item.category
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        appImage?.roundedStyle(width: self.frame.height)
     }
 }

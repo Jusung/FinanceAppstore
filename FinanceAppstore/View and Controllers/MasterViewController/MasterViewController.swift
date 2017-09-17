@@ -11,14 +11,10 @@ import SwiftyJSON
 
 class MasterViewController: UITableViewController {
     
-    var json: JSON = JSON.null
+    var items: [AppstoreItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     // MARK: - Table view data source
@@ -28,26 +24,16 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        switch self.json.type {
-        case .array :
-            return self.json.count
-        default:
-            return 1
-        }
+        return items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppstoreMasterCell", for: indexPath) as! MasterViewCell
         let row = indexPath.row
+        let item: AppstoreItem = items[row]
         
         cell.ranking?.text = String(row + 1)
-        cell.title?.text = self.json[row]["im:name"]["label"].string
-        cell.category?.text = self.json[row]["category"]["attributes"]["term"].string
-        
-        let thumbnailURL = self.json[row]["im:image"][2]["label"].string
-        cell.appImage.imageFromURL(urlString: thumbnailURL!)
-        cell.appImage.roundedStyle(width: cell.appImage.frame.width)
+        cell.item = item
         
         return cell
     }
@@ -63,16 +49,17 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "DetailSegueIdentifier" {
             if let indexPath = sender as? IndexPath {
                 let row = indexPath.row
-                let appId = self.json[row]["id"]["attributes"]["im:id"]
-                let url = URL(string: "https://itunes.apple.com/lookup?id=\(appId)&country=kr")
+                let item: AppstoreItem = items[row]
+                let appId = item.appId
+                let url = URL(string: "https://itunes.apple.com/lookup?id=\(appId!)&country=kr")
                 
                 do {
                     let contentData = try Data(contentsOf: url!)
-                    let json = JSON(data: contentData)
                     let detailViewController = segue.destination as! DetailViewController
-                    detailViewController.json = json
+                    let viewModel = try DetailViewModel(data: contentData)
+                    detailViewController.viewModel = viewModel
                 } catch {
-                    print("error occurs")
+                    print("error occurs while prepare data:\(error)")
                 }
             }
         }

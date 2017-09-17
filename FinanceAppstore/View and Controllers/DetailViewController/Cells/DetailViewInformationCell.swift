@@ -9,21 +9,31 @@
 import UIKit
 
 class DetailViewInformationCell: UITableViewCell {
-    @IBOutlet weak var developer: UILabel!
-    @IBOutlet weak var category: UILabel!
-    @IBOutlet weak var updatedDate: UILabel!
-    @IBOutlet weak var version: UILabel!
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var developer: UILabel?
+    @IBOutlet weak var category: UILabel?
+    @IBOutlet weak var updatedDate: UILabel?
+    @IBOutlet weak var version: UILabel?
+    @IBOutlet weak var rating: UILabel?
 
+    var item: DetailViewModelItem? {
+        didSet {
+            guard let item = item as? DetailViewModelInformationItem else {
+                return
+            }
+            
+            developer?.text = item.developer
+            category?.text = item.category
+            updatedDate?.text = item.updatedDate.shortDate()
+            version?.text = item.version
+            rating?.text = item.rating
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    static var identifier: String {
+        return String(describing: self)
     }
-
 }

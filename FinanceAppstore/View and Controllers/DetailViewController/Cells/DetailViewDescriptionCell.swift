@@ -9,17 +9,23 @@
 import UIKit
 
 class DetailViewDescriptionCell: UITableViewCell {
-    @IBOutlet weak var appDescription: UILabel!
+    @IBOutlet weak var appDescription: UILabel?
 
+    var item: DetailViewModelItem? {
+        didSet {
+            guard let item = item as? DetailViewModelDescriptionItem else {
+                return
+            }
+            
+            appDescription?.text = item.appDescription
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static var identifier: String {
+        return String(describing: self)
     }
-
 }
