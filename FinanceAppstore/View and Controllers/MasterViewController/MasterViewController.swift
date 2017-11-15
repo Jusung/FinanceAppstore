@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class MasterViewController: UITableViewController {
-    
+    // 주석추가
     var items: [AppstoreItem] = []
 
     override func viewDidLoad() {
