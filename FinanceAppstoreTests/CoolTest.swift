@@ -13,6 +13,7 @@ class CoolTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        // 머지테스트 하세요. 언제 오십니까? 그때 오십쇼.
     }
     
     override func tearDown() {
