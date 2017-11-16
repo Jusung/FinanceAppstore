@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "532854AB1FBD4D2500B5ED6B"
+               BuildableName = "FinanceAppstoreTests.xctest"
+               BlueprintName = "FinanceAppstoreTests"
+               ReferencedContainer = "container:FinanceAppstore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
