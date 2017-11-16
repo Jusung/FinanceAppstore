@@ -15,7 +15,7 @@ jobs:
       xcode: "8.3.3"
     steps:
       - checkout
-      - deploy
+      - deploy:
           name: Deploy
           command: fastlane release_appstore
 
