@@ -23,10 +23,10 @@ workflows:
   version: 2
   test_release:
     jobs:
-      - test:
-        filters:
-          branches:
-            only: circle
+      - test
+        # filters:
+        #   branches:
+        #     only: circle
 
       # - deploy:
       #     requires:
