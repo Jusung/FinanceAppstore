@@ -16,6 +16,7 @@ class CoolTest: XCTestCase {
         // 머지테스트 하세요. 언제 오십니까? 그때 오십쇼.
         // 이 냄새는 무엇이지? 한번 알아맞춰 보세요. 선이 굵게 보였다.
         // 그러나 그것은 무엇일까? 끌어내보자.
+        // Edited on Develop.
     }
     
     override func tearDown() {
