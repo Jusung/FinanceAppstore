@@ -26,7 +26,7 @@ workflows:
       - test:
           filters:
             branches:
-              only: feature/circle
+              only: develop
 
       # - deploy:
       #     requires:
