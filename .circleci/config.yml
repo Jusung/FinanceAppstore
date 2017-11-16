@@ -27,6 +27,7 @@ workflows:
         filters:
           branches:
             only: develop
+            
       # - deploy:
       #     requires:
       #       test
