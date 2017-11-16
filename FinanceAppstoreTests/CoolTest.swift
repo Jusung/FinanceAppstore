@@ -1,6 +1,6 @@
 //
-//  FinanceAppstoreTests.swift
-//  FinanceAppstoreTests
+//  CoolTest.swift
+//  FinanceAppstore
 //
 //  Created by JusungKye on 16/11/2017.
 //  Copyright © 2017 TestForKakaoBank. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class FinanceAppstoreTests: XCTestCase {
+class CoolTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -20,15 +20,19 @@ class FinanceAppstoreTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testCoolMan() {
         XCTAssertTrue(true)
     }
     
-    func testExample2() {
+    func testYoungMan() {
         XCTAssertTrue(true)
     }
     
-    func testExample3() {
+    func testHappyMan() {
+        XCTAssertTrue(true)
+    }
+    
+    func testGeneral() {
         XCTAssertTrue(true)
     }
     
