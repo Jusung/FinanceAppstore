@@ -24,9 +24,10 @@ workflows:
   test_release:
     jobs:
       - test:
-        filters:
-          branches:
-            only: feature/circle
+          branche: develop
+        # filters:
+        #   branches:
+        #     only: feature/circle
 
       # - deploy:
       #     requires:
