@@ -279,11 +279,13 @@
 				TargetAttributes = {
 					532854AB1FBD4D2500B5ED6B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EBTMCR84RT;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 53628DB81F6D3E1200D07B01;
 					};
 					53628DB81F6D3E1200D07B01 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EBTMCR84RT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -449,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EBTMCR84RT;
 				INFOPLIST_FILE = FinanceAppstoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mytest.FinanceAppstoreTests;
@@ -462,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EBTMCR84RT;
 				INFOPLIST_FILE = FinanceAppstoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mytest.FinanceAppstoreTests;
@@ -569,6 +573,7 @@
 			baseConfigurationReference = 501E46031746186C05B0FDAA /* Pods-FinanceAppstore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EBTMCR84RT;
 				INFOPLIST_FILE = FinanceAppstore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestForKakaoBank.FinanceAppstore;
@@ -582,6 +587,7 @@
 			baseConfigurationReference = 0D44E30AE1F163E877B94C2B /* Pods-FinanceAppstore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EBTMCR84RT;
 				INFOPLIST_FILE = FinanceAppstore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestForKakaoBank.FinanceAppstore;
