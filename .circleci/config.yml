@@ -4,27 +4,35 @@
 #
 version: 2
 jobs:
-  test:
+  qa:
     macos:
       xcode: "8.3.3"
     steps:
       - checkout
-      # - run: fastlane scan
+      - run:
+          name: Update fastlane
+          command: sudo gem update fastlane
       - run: fastlane beta
-  deploy:
-    macos:
-      xcode: "8.3.3"
-    steps:
-      - checkout
-      - deploy:
-          name: Deploy
-          command: fastlane release_appstore
+  # test:
+  #   macos:
+  #     xcode: "8.3.3"
+  #   steps:
+  #     - checkout
+  #     - run: fastlane scan
+  # deploy:
+  #   macos:
+  #     xcode: "8.3.3"
+  #   steps:
+  #     - checkout
+  #     - deploy:
+  #         name: Deploy
+  #         command: fastlane release_appstore
 
 workflows:
   version: 2
-  test_release:
+  qa_distribution:
     jobs:
-      - test:
+      - qa:
           filters:
             branches:
               only: develop
