@@ -27,10 +27,10 @@ platform :ios do
   lane :test do
     scan
   end
-#변했다.
+#변했다.2
   ENV["FASTLANE_USER"] = "kyejusung@gmail.com"
   ENV["FASTLANE_PASSWORD"] = "rPwntjd1!"
-  ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "cfcx-afxu-vysx-ptwc"
+  # ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "cfcx-afxu-vysx-ptwc"
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
