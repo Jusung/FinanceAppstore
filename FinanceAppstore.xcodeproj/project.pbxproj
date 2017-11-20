@@ -565,7 +565,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "e8546ce7-cdde-40b2-ab6d-75d5e0626d48";
+				PROVISIONING_PROFILE = "5205597f-f917-451b-882f-6166d561f183";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -582,8 +582,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.financeappstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "39aa61f0-62f2-4469-9ccf-91451d2f7c63";
-				PROVISIONING_PROFILE_SPECIFIER = "jusung dev";
+				PROVISIONING_PROFILE = "788963d1-6506-4168-bde3-f323da0685a5";
+				PROVISIONING_PROFILE_SPECIFIER = "finance dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -598,8 +598,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.financeappstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8546ce7-cdde-40b2-ab6d-75d5e0626d48";
-				PROVISIONING_PROFILE_SPECIFIER = "com.my.financeappstore AppStore";
+				PROVISIONING_PROFILE = "a518601c-faf4-4b98-96db-16264a42f632";
+				PROVISIONING_PROFILE_SPECIFIER = "finance release";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
