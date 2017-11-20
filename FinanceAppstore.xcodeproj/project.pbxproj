@@ -580,7 +580,7 @@
 				DEVELOPMENT_TEAM = EBTMCR84RT;
 				INFOPLIST_FILE = FinanceAppstore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestForKakaoBank.FinanceAppstore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.my.financeappstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "39aa61f0-62f2-4469-9ccf-91451d2f7c63";
 				PROVISIONING_PROFILE_SPECIFIER = "jusung dev";
@@ -596,7 +596,7 @@
 				DEVELOPMENT_TEAM = EBTMCR84RT;
 				INFOPLIST_FILE = FinanceAppstore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestForKakaoBank.FinanceAppstore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.my.financeappstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5205597f-f917-451b-882f-6166d561f183";
 				PROVISIONING_PROFILE_SPECIFIER = "jusung release";
