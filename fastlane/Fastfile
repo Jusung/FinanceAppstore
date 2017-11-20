@@ -28,8 +28,8 @@ platform :ios do
     scan
   end
 
-  # ENV["FASTLANE_USER"] = "kyejusung@gmail.com"
-  # ENV["FASTLANE_PASSWORD"] = "rPwntjd1!"
+  ENV["FASTLANE_USER"] = "kyejusung@gmail.com"
+  ENV["FASTLANE_PASSWORD"] = "rPwntjd1!"
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
