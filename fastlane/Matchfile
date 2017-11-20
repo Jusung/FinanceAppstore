@@ -1,4 +1,4 @@
-git_url "https://github.com/Jusung/mycert.git"
+git_url "https://github.com/Jusung/fastlanecert"
 
 type "development" # The default type, can be: appstore, adhoc, enterprise or development
 
