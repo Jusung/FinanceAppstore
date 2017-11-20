@@ -27,7 +27,7 @@ platform :ios do
   lane :test do
     scan
   end
-#됄까?
+
   ENV["FASTLANE_USER"] = "kyejusung@gmail.com"
   ENV["FASTLANE_PASSWORD"] = "rPwntjd1!"
 
