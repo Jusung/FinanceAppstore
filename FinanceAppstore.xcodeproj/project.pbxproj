@@ -576,13 +576,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 501E46031746186C05B0FDAA /* Pods-FinanceAppstore.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jusung Kye (2769D8Z6X4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jusung Kye (2769D8Z6X4)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FinanceAppstore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.financeappstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "39aa61f0-62f2-4469-9ccf-91451d2f7c63";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -592,13 +593,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D44E30AE1F163E877B94C2B /* Pods-FinanceAppstore.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jusung Kye (EBTMCR84RT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jusung Kye (EBTMCR84RT)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FinanceAppstore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.financeappstore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5205597f-f917-451b-882f-6166d561f183";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
