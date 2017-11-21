@@ -1,7 +1,7 @@
 git_url "https://Jusung@github.com/Jusung/fastlanecert.git"
 
 type "appstore" # The default type, can be: appstore, adhoc, enterprise or development
-
+#
 app_identifier ["com.my.financeappstore"]
 username "kyejusung@gmail.com" # Your Apple Developer Portal username
 
